@@ -23,4 +23,12 @@ describe('JankenService', () => {
   it('getRock を実行するとグーが返ってくるべき', () => {
     expect(service.getRock()).toEqual("Rock");
   });
+
+  it('getScissors を実行するとチョキが返ってくるべき', () => {
+    expect(service.getScissors()).toEqual("Scissors");
+  });
+
+  it('getPaper を実行するとパーが返ってくるべき', () => {
+    expect(service.getPaper()).toEqual("Paper");
+  })
 });

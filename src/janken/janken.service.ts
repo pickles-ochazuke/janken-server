@@ -7,7 +7,15 @@ export class JankenService {
     return 'Rock';
   }
 
-  getRock(): Janken {
+  getRock(): "Rock" {
     return "Rock";
+  }
+
+  getScissors(): "Scissors" {
+    return "Scissors";
+  }
+
+  getPaper(): "Paper" {
+    return "Paper";
   }
 }
