@@ -13,7 +13,6 @@ export class AppController {
 
   @Get()
   getJanken(): Janken {
-    const janken: Janken = this.janeknService.getRock();
-    return this.appService.getJanken();
+    return this.janeknService.getJanken();
   }
 }

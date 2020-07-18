@@ -19,8 +19,9 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getJanken()).toBe('Rock');
+    it('グー、チョキ、パーのいずれかを返す', () => {
+      const janken = appController.getJanken();
+      expect(janken === "Rock" || janken === "Paper" || janken === "Scissors").toBe(true);
     });
   });
 });

@@ -4,7 +4,10 @@ import { Janken } from 'src/app.controller';
 @Injectable()
 export class JankenService {
   getJanken(): Janken {
-    return 'Rock';
+    const janken = this.getRandom();
+    return janken < 3 ? this.getRock():
+            janken < 6 ? this.getScissors():
+            janken < 10 ? this.getPaper() : this.getRock();
   }
 
   getRock(): "Rock" {
@@ -17,5 +20,9 @@ export class JankenService {
 
   getPaper(): "Paper" {
     return "Paper";
+  }
+
+  getRandom() {
+    return Math.floor(Math.random() * 10);
   }
 }
