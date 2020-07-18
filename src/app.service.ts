@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { Janken } from './app.controller';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getJanken(): Janken {
+    return 'Rock';
   }
 }
